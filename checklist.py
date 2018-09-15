@@ -1,4 +1,5 @@
-
+# Name: Thomas J. Lee
+# Project: Checklist
 
 checklist = []
 
@@ -24,6 +25,14 @@ def print_index(element):
         index_counter += 1
     return index_output
 
+def list_all_elements(array):
+    index = 0
+    if len(array)>0:
+        for element in array:
+            print("{} {}".format(index, element))
+            index += 1
+    else:
+        print("Checklist is empty")
 
 def test():
     # Create Test
@@ -55,4 +64,5 @@ def test():
         else:
             print("Test Destroy {} SUCCESS".format(element_3))
 
-test()
+# test()
+list_all_elements(checklist)
