@@ -1,7 +1,7 @@
 # Name: Thomas J. Lee
 # Project: Checklist
 
-checklist = []
+checklist = ["Work"]
 
 def create(item):
     checklist.append(item)
@@ -9,8 +9,8 @@ def create(item):
 def read(index):
     return checklist[index]
 
-def update(index, item):
-    checklist[index] = item
+def update(index, element):
+    checklist[index] = element
 
 def destroy(index):
     checklist.pop(index)
@@ -34,8 +34,9 @@ def list_all_elements(array):
     else:
         print("Checklist is empty")
 
-def mark_as_completed(element):
-    print("{} {}".format("√", element))
+def mark_as_completed(index):
+    update(index, checklist[index])
+    print("{} {}".format("√", read(index)))
 
 def test():
     # Create Test
@@ -67,4 +68,4 @@ def test():
         else:
             print("Test Destroy {} SUCCESS".format(element_3))
 
-# test()
+mark_as_completed(0)
