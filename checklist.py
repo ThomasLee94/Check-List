@@ -13,7 +13,7 @@ def update(index, item):
     checklist[index] = item
 
 def destroy(index):
-    checklist.pop(1)
+    checklist.pop(index)
 
 def print_index(element):
     index_counter = -1
@@ -33,6 +33,9 @@ def list_all_elements(array):
             index += 1
     else:
         print("Checklist is empty")
+
+def mark_as_completed(element):
+    print("{} {}".format("√", element))
 
 def test():
     # Create Test
@@ -65,4 +68,3 @@ def test():
             print("Test Destroy {} SUCCESS".format(element_3))
 
 # test()
-list_all_elements(checklist)
